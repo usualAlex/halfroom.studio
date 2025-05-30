@@ -9,5 +9,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^jex$ jex.html [NC, L]
 RewriteRule ^privacy-policy$ privacy-policy.html [NC, L]
 
+# Redirect /index to root URL
+RewriteRule ^index$ / [R,L]
+
 # 404 error document
 ErrorDocument 404 /nothing.html
