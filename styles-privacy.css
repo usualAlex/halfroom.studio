@@ -7,6 +7,8 @@
 body {
   font-family: Arial, sans-serif;
   font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 10pt;
   margin: 20px;
   background-color: #111;
   color: #FFFEEF;
@@ -27,15 +29,18 @@ a:visited {
 }
 
 .header img {
-  width: 200px;
-  height: auto;
+  width: 120px;
+  height: 100px;
+  opacity: 0.5;
 }
-
+.header img:hover {
+  opacity: 0.9;
+}
 .content {
   max-width: 800px;
   margin: 0 auto;
   padding: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 300px;
   background-color: #111;
 }
 
