@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = link.getAttribute("data-tab");
       link.classList.add("active");
       document.getElementById(target).classList.add("active");
+
+      // Update URL in address bar
+      const url = `#${target}`;
+      window.history.pushState({}, '', url);
     });
   });
 });
