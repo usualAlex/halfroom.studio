@@ -1,0 +1,379 @@
+@font-face {
+  font-family: 'JazzyRabbit';
+  src: url('fonts/JazzyRabbit.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 200 300 400 500 600 700 800 900; 
+}
+
+
+:root {
+  --primary-color: #ff0000;
+  --bold: 700;
+}
+
+html { 
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
+body {
+height: 100%;
+width: 100%;
+background: black;
+overflow-y: auto;
+overflow-x: hidden;
+color: #FFFEEF;
+padding: 0px;
+margin: 0;
+z-index: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'JazzyRabbit', sans-serif;
+}
+
+a {
+	color: #B3B3B3; 
+	text-decoration: none; 
+	font-weight: 400;
+	font-size: 10pt;
+	padding: 0;
+	margin: 0;
+
+}
+img{
+	user-select: none;
+}
+.background {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url('img/background-placeholder.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.background-overlay{
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  background-image: url('img/background-overlay2.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.content {
+  position: absolute;
+  display: flex; /* add this */
+  flex-direction: column; /* add this */
+  justify-content: center; /* add this */
+  align-items: center; /* add this */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  padding-top: 0px; 
+}
+@media (max-height: 999px) {
+  .content {
+    padding-top: 200px; 
+  }
+}
+.logo-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* add some space between elements */
+  text-align: center; 
+}
+
+.title-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px; /* add some space between elements */
+  width: 90%;
+  background-image: url('img/title-bg.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.title-text {
+  font-family: 'JazzyRabbit', sans-serif;
+  font-size: 10vw;
+  font-size: clamp(20pt, 10vw, 40pt);
+  color: #D7EEF1;
+  text-align: center;
+  -webkit-text-stroke: 1px #1E4951; /* for Safari and Chrome */
+  text-shadow: -1px 0 #1E4951, 1px 0 #1E4951, 0 -1px #1E4951, 0 1px #1E4951; /* for Firefox and other browsers */
+}
+
+.description-container {
+  position: relative;
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.description-text {
+  font-family: 'Rubik';
+  font-weight: 200;
+  font-size: 20pt;
+  color: #D7EEF1;
+  text-align: center;
+}
+
+.buttons-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px; /* add some space between elements */
+  margin-top: 0px;
+  text-align: center;
+}
+.buttons-text {
+  font-family: 'JazzyRabbit', sans-serif;
+  font-size: 36pt;
+  color: #D7EEF1;
+  text-align: center;
+  -webkit-text-stroke: 1px #1E4951; /* for Safari and Chrome */
+  text-shadow: -1px 0 #1E4951, 1px 0 #1E4951, 0 -1px #1E4951, 0 1px #1E4951; /* for Firefox and other browsers */
+  text-align: center;
+}
+.playstore-button-desktop, .playstore-button-mobile{
+  width: 400px;
+  height: 90px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: 0.05s ease-in-out;
+}
+.playstore-button-desktop:hover, .playstore-button-mobile:hover{
+  transform: scale(1.02); 
+  transition: 0.05s ease-in-out;
+}
+.playstore-button-desktop img, .playstore-button-mobile img {
+  vertical-align: middle;
+  height: 100%;
+  width: auto;
+}
+.playstore-button-mobile{ display: none;}
+.playstore-button-desktop{ display: block;}
+.footer-container{
+  position: absolute;
+  position: fixed;
+  display: block;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px; /* add some space between elements */
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 9pt;
+}
+.footer-button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  margin: 0 auto; /* add this */
+  margin-bottom: 0px; /* add some space between elements */
+  margin-top: 10px;
+  text-align: center;
+  background-image: url('img/privacy-policy-btn.svg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.trailer-container {
+  position: absolute;
+  position: fixed;
+  top: 200px; /* adjust the top position as needed */
+  right: 10%; /* adjust the right position as needed */
+  width: 300px; /* adjust the width as needed */
+  height: 250px; /* adjust the height as needed */
+  text-align: center;
+  cursor: pointer; /* add a pointer cursor to indicate it's a link */
+  animation: float 3.5s ease-in-out infinite;
+  z-index: 10;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------------------------- STORY OVERLAY */
+.story-button{
+  width: 220px;
+  height: 100px;
+  background-image: url('img/jex/story-btn.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.story-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.story-content-container {
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: transparent;
+}
+.story-content {
+  text-align: left;
+  padding: 100px 50px 100px 50px;
+}
+.story-title{
+  color: #D7EEF1;
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 26pt;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.story-title {
+  text-align: center;
+}
+.story-content .description-text{
+  font-family: 'Rubik';
+  font-weight: 200;
+  font-size: 18pt;
+  color: #D7EEF1;
+  text-align: left;
+}
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-image: url('img/jex/close-btn.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 60px;
+}
+.close-button:hover {
+  opacity: 0.93;
+}
+.story-button:hover {
+  opacity: 0.93;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.overlay-open {
+  overflow-y: auto !important;
+}
+
+@media (max-width: 1100px) {
+  .playstore-button-mobile{ display: block;}
+  .playstore-button-desktop{ display: none;}
+  .content {
+    position: absolute;
+    display: flex; /* add this */
+    flex-direction: column; /* add this */
+    justify-content: center; /* add this */
+    align-items: center; /* add this */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1;
+    padding-top: 100px; 
+  }
+  .trailer-container {
+    position: relative; /* change the position to relative */
+    top: auto; /* reset the top position */
+    right: auto; /* reset the right position */
+    width: 100%; /* set the width to 100% */
+    max-height: 800px; /* set the maximum height to 400px */
+    background-size: contain; /* set the background-size to contain */
+    background-position: center center; /* set the background-position to center center */
+  }
+  .footer-container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	margin-bottom: 0px; /* add some space between elements */
+	margin-top: 10px;
+	text-align: center;
+  }
+  /*story text on mobile*/
+  .story-content .description-text{
+    font-family: 'Rubik';
+    font-weight: 200;
+    font-size: 14pt;
+    color: #D7EEF1;
+    text-align: left;
+  }
+}

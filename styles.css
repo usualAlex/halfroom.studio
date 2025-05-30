@@ -1,0 +1,270 @@
+/* styles.css */
+@font-face {
+  font-family: 'JazzyRabbit';
+  src: url('fonts/JazzyRabbit.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 200 300 400 500 600 700 800 900; 
+}
+
+body {
+  margin: 0;
+  /*font-family: system-ui, sans-serif;*/
+  font-family: 'Rubik';
+  font-weight: 300;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+h2 {
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 20pt;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+/* ----------------------------------------------------------------------- Header */
+header {
+  background: #111;
+  color: #fff;
+  padding: 5px 0;
+  padding-top: 20px;
+  text-align: center;
+  background-image: url('img/noise-dark.png');
+  background-repeat: repeat;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.logo-footer {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1px;
+  opacity: 0.5;
+}
+
+nav {
+  margin-top: 15px;
+  user-select: none;
+}
+
+nav a {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  color: #ddd;
+  text-decoration: none;
+  font-family: 'Rubik';
+  font-weight: 300;
+  font-size: 12pt;
+  user-select: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0px 10px;
+}
+
+nav a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.centered {
+  text-align: center;
+}
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+
+.game {
+  width: 25%;
+  min-width: 500px;
+  padding-top: 50px;
+}
+.about {
+  width: 25%;
+  min-width: 500px;
+  margin: 0 auto;
+}
+.contact{
+  width: 25%;
+  min-width: 500px;
+  margin: 0 auto;
+}
+.presskits{
+  width: 35%;
+  min-width: 500px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------------------- Content */
+.button {
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 15px 10px;
+  font-family: 'Rubik';
+  font-weight: 200;
+  font-size: 13pt;
+}
+.btn-wishlist {
+  background-color: transparent;
+  border: none;
+  color: #111;
+  font-family: 'Rubik';
+  font-weight: 400;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+} 
+.btn-wishlist:hover { opacity: 0.9; }
+.btn-trailer {
+  background-color: #1693D3;
+  border: none;
+  color: white;
+  font-family: 'Rubik';
+  font-weight: 400;
+  border-radius: 50px;
+}
+.btn-trailer:hover { opacity: 0.9; }
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+.game-icon-link {
+  transition: all 0.2s ease-in-out;
+}
+.game-icon-link:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.15));
+  transition: all 0.2s ease-in-out;
+}
+
+/* ----------------------------------------------------------------------- Content - Blog */
+.presskit {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+.presskit h2 {
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 20pt;
+  margin-bottom: 10px;
+  color: #333;
+}
+.presskit p {
+  margin-bottom: 20px;
+  font-family: 'Rubik';
+  font-weight: 300;
+  font-size: 12pt;
+  text-decoration: none;
+  color: #333;
+}
+.presskit-link {
+  text-decoration: none;
+  display: block;
+}
+.presskit-link:hover h3 {
+  text-decoration: underline;
+  color: #333;
+}
+.presskits a { color: #333;}
+.presskits a:hover { color: #333;}
+.presskits a:visited { color: #333;}
+.download-button {
+  width: 130px;
+  height: 20px;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: normal;
+  vertical-align: middle;
+  border: none;
+  border-radius: 25px;
+  margin: 15px 0px;
+  font-family: 'Rubik';
+  font-weight: 200;
+  font-size: 12pt;
+}
+.download-button:hover {
+  background-color: #111;
+}
+/* ----------------------------------------------------------------------- Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  background: #eee;
+  background-image: url("img/noise.png");
+  background-repeat: repeat;
+}
+footer a {
+  color: #159ED8; /* light blue */
+}
+footer a:hover {
+  color: #34A8FF; /* slightly lighter light blue on hover */
+}
+footer a:visited {
+  color: #159ED8; /* same as normal */
+}
+
+/* ----------------------------------------------------------------------- Mobile */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    margin: 15px auto;
+  }
+  .game-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .game {
+    width: 90vw;
+    margin: 20px auto;
+    min-width: 100px;
+  }
+}

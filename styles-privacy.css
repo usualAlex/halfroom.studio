@@ -1,0 +1,67 @@
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('fonts/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 100 200 300 400 500 600 700 800 900; 
+}
+body {
+  font-family: Arial, sans-serif;
+  font-family: 'Rubik';
+  margin: 20px;
+  background-color: #111;
+  color: #FFFEEF;
+}
+a {
+  color: #159ED8; /* light blue */
+}
+a:hover {
+  color: #34A8FF; /* slightly lighter light blue on hover */
+}
+a:visited {
+  color: #159ED8; /* same as normal */
+}
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 150px;
+}
+
+.header img {
+  width: 200px;
+  height: auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  padding-bottom: 100px;
+  background-color: #111;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 90px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  margin-top: 35px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
