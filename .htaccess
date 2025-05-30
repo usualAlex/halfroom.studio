@@ -1,6 +1,13 @@
 RewriteEngine On
+
+# Serve index.html as the default index file
+DirectoryIndex index.html
+
+# Serve other HTML files without extensions
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
-DirectoryIndex index.html
+RewriteRule ^jex$ jex.html [NC, L]
+RewriteRule ^privacy-policy$ privacy-policy.html [NC, L]
+
+# 404 error document
 ErrorDocument 404 /nothing.html
