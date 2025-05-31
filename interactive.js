@@ -24,40 +24,6 @@
 //   });
 // });
 
-window.addEventListener("load", () => {
-  const links = document.querySelectorAll(".tab-link");
-  const tabs = document.querySelectorAll(".tab-content");
-
-  // Check if the URL has a hash and activate the corresponding tab
-  const hash = window.location.hash;
-  if (hash) {
-    const target = hash.replace("#", "");
-    const link = document.querySelector(`.tab-link[data-tab="${target}"]`);
-    if (link) {
-      link.classList.add("active");
-      document.getElementById(target).classList.add("active");
-    }
-  }
-
-  links.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-
-      // Remove active from all
-      links.forEach(l => l.classList.remove("active"));
-      tabs.forEach(t => t.classList.remove("active"));
-
-      // Add active to clicked tab
-      const target = link.getAttribute("data-tab");
-      link.classList.add("active");
-      document.getElementById(target).classList.add("active");
-
-      // Update URL in address bar
-      const url = `#${target}`;
-      window.history.replaceState({}, '', url);
-    });
-  });
-});
 
 //JEX toggle more info on the landing page
 const storyButton = document.querySelector('.story-button');

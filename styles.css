@@ -9,6 +9,20 @@
   font-weight: 100 200 300 400 500 600 700 800 900; 
 }
 
+:root {
+  --background-color: #111;
+  --text-color: #333;
+  --link-color: #159ED8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --text-color: #fff;
+    --link-color: #159ED8;
+  }
+}
+
 body {
   margin: 0;
   /*font-family: system-ui, sans-serif;*/
