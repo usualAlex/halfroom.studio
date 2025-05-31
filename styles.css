@@ -99,10 +99,14 @@ main {
 
 .tab-content {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .tab-content.active {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .centered {
@@ -116,24 +120,29 @@ main {
 }
 
 .game {
-  width: 25%;
-  min-width: 500px;
-  padding-top: 50px;
+  width: 500px;
+  height: auto;
+  max-width: 500px;
+  min-width: 100px;
+  marginp: 50px 0px;
 }
 .about {
-  width: 25%;
-  min-width: 500px;
+  width: auto;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 10px 20px;
 }
 .contact{
-  width: 25%;
-  min-width: 500px;
+  width: auto;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 10px 20px;
 }
 .presskits{
-  width: 35%;
-  min-width: 500px;
+  width: auto;
+  max-width: 500px;
   margin: 0 auto;
+  padding: 10px 20px;
 }
 
 /* ----------------------------------------------------------------------- Content */
@@ -274,11 +283,11 @@ footer a:visited {
   .game-list {
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 20px;
   }
   .game {
     width: 90vw;
-    margin: 20px auto;
+    margin: 30px 0px;
     min-width: 100px;
   }
 }
