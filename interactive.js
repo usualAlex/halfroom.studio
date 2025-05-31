@@ -28,6 +28,17 @@ window.addEventListener("load", () => {
   const links = document.querySelectorAll(".tab-link");
   const tabs = document.querySelectorAll(".tab-content");
 
+  // Check if the URL has a hash and activate the corresponding tab
+  const hash = window.location.hash;
+  if (hash) {
+    const target = hash.replace("#", "");
+    const link = document.querySelector(`.tab-link[data-tab="${target}"]`);
+    if (link) {
+      link.classList.add("active");
+      document.getElementById(target).classList.add("active");
+    }
+  }
+
   links.forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
@@ -43,7 +54,7 @@ window.addEventListener("load", () => {
 
       // Update URL in address bar
       const url = `#${target}`;
-      window.history.pushState({}, '', url);
+      window.history.replaceState({}, '', url);
     });
   });
 });
