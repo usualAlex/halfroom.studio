@@ -8,6 +8,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^jex$ jex.html [NC, L]
 RewriteRule ^privacy-policy$ privacy-policy.html [NC, L]
+RewriteRule ^about$ about.html [NC, L]
+RewriteRule ^contact$ contact.html [NC, L]
+RewriteRule ^presskits$ presskits.html [NC, L]
 
 # Redirect /index to root URL
 RewriteRule ^index$ / [R,L]
