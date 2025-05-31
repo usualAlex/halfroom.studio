@@ -98,7 +98,7 @@ main {
 }
 
 .tab-content {
-  display: none;
+  display: block;
 }
 
 .tab-content.active {
