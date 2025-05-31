@@ -76,3 +76,21 @@ ul {
 li {
   margin-bottom: 5px;
 }
+
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 12pt; /* increase font size by 2pt */
+  }
+  h1 {
+    font-size: 26px; /* increase font size by 2pt */
+  }
+  h2 {
+    font-size: 27px; /* increase font size by 2pt */
+  }
+  h3, h4 {
+    font-size: 1.2em; /* increase font size by 20% */
+  }
+  p {
+    font-size: 1.1em; /* increase font size by 10% */
+  }
+}
