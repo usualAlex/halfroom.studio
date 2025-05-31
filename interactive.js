@@ -1,6 +1,30 @@
 // TABS for the main studio site
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
+//   const links = document.querySelectorAll(".tab-link");
+//   const tabs = document.querySelectorAll(".tab-content");
+
+//   links.forEach(link => {
+//     link.addEventListener("click", e => {
+//       e.preventDefault();
+
+//       // Remove active from all
+//       links.forEach(l => l.classList.remove("active"));
+//       tabs.forEach(t => t.classList.remove("active"));
+
+//       // Add active to clicked tab
+//       const target = link.getAttribute("data-tab");
+//       link.classList.add("active");
+//       document.getElementById(target).classList.add("active");
+
+//       // Update URL in address bar
+//       const url = `#${target}`;
+//       window.history.pushState({}, '', url);
+//     });
+//   });
+// });
+
+window.addEventListener("load", () => {
   const links = document.querySelectorAll(".tab-link");
   const tabs = document.querySelectorAll(".tab-content");
 
