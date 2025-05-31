@@ -197,20 +197,30 @@ main {
 }
 
 /* ----------------------------------------------------------------------- Content - Blog */
+
 .presskit {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 30px;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;
+  margin: 0;
+  margin-top: 80px;
+  border: none;
+  padding: 0px;
+}
+.presskit img{
+  width: 100%;
+  height: auto;
 }
 .presskit h2 {
   font-family: 'Rubik';
   font-weight: 600;
   font-size: 20pt;
   margin-bottom: 10px;
+  color: #333;
+}
+.presskit h3 {
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 14pt;
+  margin-bottom: 0px;
   color: #333;
 }
 .presskit p {
@@ -232,8 +242,15 @@ main {
 .presskits a { color: #333;}
 .presskits a:hover { color: #333;}
 .presskits a:visited { color: #333;}
+
+.downloads .cont{
+  display: inline-block;
+  width: auto;
+  min-width: 130px;
+  height: auto;
+}
 .download-button {
-  width: 130px;
+  width: 200px;
   height: 20px;
   padding: 10px 20px;
   background: #222;
@@ -251,6 +268,15 @@ main {
 }
 .download-button:hover {
   background-color: #111;
+}
+.downloads{
+  width: 100%;
+}
+.filesize{
+  font-family: 'Rubik';
+  font-weight: 600;
+  font-size: 10pt;
+  padding-left: 15px;
 }
 /* ----------------------------------------------------------------------- Footer */
 footer {
