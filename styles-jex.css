@@ -354,6 +354,30 @@ img{
   overflow-y: auto !important;
 }
 
+.food{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: -10px;
+  z-index: 1;
+  width: 800px; height: auto;
+}
+.crate{
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: -20;
+  z-index: 1;
+  width: 350px;
+  height: auto;
+}
+.pipe{
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  right: -20px;
+  z-index: 1;
+}
 
 @media (max-height: 1150px) {
   .footer-container{
@@ -449,4 +473,8 @@ img{
     text-align: center;
     z-index: 10;
   }
+  .description-text {
+    padding-top: 50px;
+  }
+  
 }
