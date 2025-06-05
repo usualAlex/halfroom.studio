@@ -287,6 +287,16 @@ footer {
   background-image: url("img/noise.png");
   background-repeat: repeat;
 }
+.footer-contact{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.footer-about{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
 footer a {
   color: #159ED8; /* light blue */
 }
