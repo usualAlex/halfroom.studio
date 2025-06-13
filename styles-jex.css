@@ -57,7 +57,7 @@ img{
   height: 100vh;
   overflow: hidden;
   z-index: -1;
-  background-image: url('img/jex-background.webp');
+  background-image: url('img/jex/jex-background.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -84,7 +84,7 @@ img{
   height: 100vh;
   overflow: hidden;
   z-index: 0;
-  background-image: url('img/background-overlay2.png');
+  background-image: url('img/jex/background-overlay2.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -128,7 +128,7 @@ img{
   height: 100px;
   margin-bottom: 20px; /* add some space between elements */
   width: 90%;
-  background-image: url('img/title-bg.png');
+  background-image: url('img/jex/title-bg.png');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -158,6 +158,7 @@ img{
   font-size: 20pt;
   color: #D7EEF1;
   text-align: center;
+
 }
 
 .buttons-container {
@@ -173,6 +174,10 @@ img{
   text-align: center;
 }
 .buttons-text {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
   font-family: 'JazzyRabbit', sans-serif;
   font-size: 36pt;
   color: #D7EEF1;
@@ -180,6 +185,10 @@ img{
   -webkit-text-stroke: 1px #1E4951; /* for Safari and Chrome */
   text-shadow: -1px 0 #1E4951, 1px 0 #1E4951, 0 -1px #1E4951, 0 1px #1E4951; /* for Firefox and other browsers */
   text-align: center;
+  background-image: url('img/jex/title-bg.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .playstore-button-desktop, .playstore-button-mobile{
   width: 400px;
@@ -201,6 +210,32 @@ img{
   height: 100%;
   width: auto;
 }
+.BETA-button-desktop, .BETA-button-mobile{
+  width: 220px;
+  height: 100px;
+  background-image: url('img/jex/btn.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: 'JazzyRabbit', sans-serif;
+  font-size: 28pt;
+  color: #D7EEF1;
+  text-align: center;
+  -webkit-text-stroke: 1px #1E4951; /* for Safari and Chrome */
+  text-shadow: -1px 0 #1E4951, 1px 0 #1E4951, 0 -1px #1E4951, 0 1px #1E4951; /* for Firefox and other browsers */
+  line-height: 95px;
+  vertical-align: middle;
+  transition: 0.05s ease-in-out;
+}
+.BETA-button-desktop:hover, .BETA-button-mobile:hover{
+  transform: scale(1.04); 
+  transition: 0.05s ease-in-out;
+}
+.BETA-button-mobile{ display: none;}
+.BETA-button-desktop{ display: block;}
 .playstore-button-mobile{ display: none;}
 .playstore-button-desktop{ display: block;}
 .footer-container{
@@ -230,7 +265,7 @@ img{
   margin-bottom: 0px; /* add some space between elements */
   margin-top: 10px;
   text-align: center;
-  background-image: url('img/privacy-policy-btn.svg');
+  background-image: url('img/jex/privacy-policy-btn.svg');
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -238,17 +273,26 @@ img{
   background-color: transparent;
   border: none;
 }
+.footer-button:hover { transform: scale(1.02); }
+
 .trailer-container {
   position: absolute;
   position: fixed;
   top: 200px; /* adjust the top position as needed */
   right: 10%; /* adjust the right position as needed */
-  width: 300px; /* adjust the width as needed */
+  width: 350px; /* adjust the width as needed */
   height: 250px; /* adjust the height as needed */
   text-align: center;
   cursor: pointer; /* add a pointer cursor to indicate it's a link */
   animation: float 3.5s ease-in-out infinite;
   z-index: 10;
+  padding-top: 40px;
+  background-image: url(img/jex/trailer-button.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.trailer-container:hover{
+  background-image: url(img/jex/trailer-button-hover.png);
 }
 @keyframes float {
   0% {
@@ -275,15 +319,13 @@ img{
 
 /* ----------------------------------------------------------------------- STORY OVERLAY */
 .story-button{
-  width: 220px;
-  height: 100px;
-  background-image: url('img/jex/story-btn.png');
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
   cursor: pointer;
   background-color: transparent;
   border: none;
+  font-family: 'JazzyRabbit', sans-serif;
+  font-size: 24pt;
+  color: #D7EEF1;
+  text-decoration: underline;
 }
 .story-overlay {
   position: fixed;
@@ -308,6 +350,7 @@ img{
 .story-content {
   text-align: left;
   padding: 100px 50px 100px 50px;
+  padding-bottom: 200px;
 }
 .story-title{
   color: #D7EEF1;
@@ -420,6 +463,9 @@ img{
 @media (max-width: 1100px) {
   .playstore-button-mobile{ display: block;}
   .playstore-button-desktop{ display: none;}
+  .BETA-button-mobile{ display: block;}
+  .BETA-button-desktop{ display: none;}
+
   .content {
     position: absolute;
     display: flex; /* add this */
